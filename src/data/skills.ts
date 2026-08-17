@@ -62,6 +62,16 @@ export const skills: Skill[] = [
     experienceYears: 4,
     description: "Datenbankentwicklung im IBM i / AS400 Umfeld.",
   },
+  {
+    id: "postgresql",
+    name: "PostgreSQL",
+    category: "Datenbanken",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description:
+      "Relationale Datenmodellierung mit Prisma ORM, u.a. bei WebSurface (Neon Postgres).",
+  },
 
   // Backend
   {
@@ -121,6 +131,34 @@ export const skills: Skill[] = [
     experienceYears: 1,
     description: "Umsetzung von Web-Oberflächen für KI-Anwendungen wie QuerySage AI.",
   },
+  {
+    id: "typescript",
+    name: "TypeScript",
+    category: "Frontend",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description: "Typisierte Frontend- und Backend-Entwicklung, u.a. mit Next.js und NestJS.",
+  },
+  {
+    id: "react-nextjs",
+    name: "React & Next.js",
+    category: "Frontend",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description:
+      "Fullstack-Webanwendungen mit dem Next.js App Router, u.a. WebSurface und das eigene Portfolio.",
+  },
+  {
+    id: "tailwind-shadcn",
+    name: "Tailwind CSS & shadcn/ui",
+    category: "Frontend",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description: "Umsetzung konsistenter, responsiver UI-Design-Systeme.",
+  },
 
   // KI
   {
@@ -178,6 +216,34 @@ export const skills: Skill[] = [
     levelScore: 4,
     experienceYears: 3,
     description: "Versionsverwaltung und kollaborative Entwicklung.",
+  },
+  {
+    id: "github-actions",
+    name: "GitHub Actions",
+    category: "DevOps",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description: "CI/CD-Pipelines für automatisierte Tests und Deployments.",
+  },
+  {
+    id: "vercel",
+    name: "Vercel",
+    category: "DevOps",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description: "Deployment und Hosting von Next.js-Anwendungen mit Preview-Deployments.",
+  },
+  {
+    id: "aws-cloud",
+    name: "AWS Cloud (IAM, EC2, S3, VPC, CDK)",
+    category: "DevOps",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description:
+      "Cloud Practitioner Zertifizierung; Infrastructure-as-Code mit AWS CDK für WebSurface.",
   },
 ];
 

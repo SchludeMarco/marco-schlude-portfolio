@@ -17,6 +17,7 @@ const { profile } = await import(toUrl("src/data/profile.ts"));
 const { experiences } = await import(toUrl("src/data/experience.ts"));
 const { getSkillsByCategory } = await import(toUrl("src/data/skills.ts"));
 const { certificates } = await import(toUrl("src/data/certificates.ts"));
+const { projects } = await import(toUrl("src/data/projects.ts"));
 
 const outDir = path.join(root, "public");
 const outPath = path.join(outDir, "marco-schlude-lebenslauf.pdf");
@@ -181,6 +182,38 @@ experiences.forEach((exp, i) => {
 
   if (i < experiences.length - 1) doc.moveDown(0.7);
 });
+
+// Selected projects
+const resumeProjects = projects.filter((project) => project.resumeHighlight);
+if (resumeProjects.length) {
+  const projectsSectionHeight = resumeProjects.reduce((sum, project) => {
+    let h = heightOf(project.title, "Helvetica-Bold", 10.5);
+    h += heightOf(project.shortDescription, "Helvetica", 9.5, { lineGap: 1 });
+    h += heightOf(project.technologies.join(" · "), "Helvetica-Oblique", 9);
+    return sum + h + 14;
+  }, 0);
+  ensureSpace(projectsSectionHeight + 60);
+
+  sectionTitle("Ausgewählte Projekte");
+  resumeProjects.forEach((project, i) => {
+    let projectHeight = heightOf(project.title, "Helvetica-Bold", 10.5);
+    projectHeight += heightOf(project.shortDescription, "Helvetica", 9.5, { lineGap: 1 });
+    projectHeight += heightOf(project.technologies.join(" · "), "Helvetica-Oblique", 9);
+    ensureSpace(projectHeight + 8);
+
+    doc.fillColor(colors.heading).font("Helvetica-Bold").fontSize(10.5).text(project.title);
+    doc.fillColor(colors.text).font("Helvetica").fontSize(9.5).text(project.shortDescription, {
+      width: contentWidth,
+      lineGap: 1,
+    });
+    doc.moveDown(0.15);
+    doc.fillColor(colors.muted).font("Helvetica-Oblique").fontSize(9).text(
+      project.technologies.join(" · "),
+      { width: contentWidth }
+    );
+    if (i < resumeProjects.length - 1) doc.moveDown(0.4);
+  });
+}
 
 // Skills
 const grouped = getSkillsByCategory();

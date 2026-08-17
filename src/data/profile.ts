@@ -2,21 +2,23 @@ import type { Profile } from "@/types";
 
 export const profile: Profile = {
   name: "Marco Schlude",
-  title: "Softwareentwickler",
-  tagline: "ERP-Tiefe trifft auf moderne KI-Kompetenz.",
+  title: "Backend & Data Engineer",
+  tagline: "ERP-Tiefe trifft auf modernen Fullstack- und Cloud-Stack.",
   shortBio:
-    "Softwareentwickler mit Schwerpunkt auf IBM i / AS400, RPG und ERP-Systemen – erweitert um moderne KI-Anwendungen, C# und Python zur Prozessautomatisierung.",
+    "Backend- und Data-Engineering-Erfahrung mit Schwerpunkt auf SQL, ERP-Systemen (IBM i / AS400, RPG) – erweitert um moderne Fullstack- und KI-Anwendungen mit Next.js, TypeScript, FastAPI und Cloud-Deployment.",
   bio:
-    "Ich entwickle seit mehreren Jahren Softwarelösungen im ERP-Umfeld – von RPG-Anwendungen auf IBM i / AS400 über SQL Server Optimierungen bis hin zu Schnittstellen zwischen ERP- und Lagerverwaltungssystemen. In den letzten Jahren habe ich diesen Erfahrungsschatz gezielt um moderne KI-Kompetenzen erweitert: von Prompting und Agenten bis zu eigenen KI-gestützten Tools. Mein Ziel ist es, klassische Business-Systeme und neue KI-Technologien sinnvoll zu verbinden, um Prozesse zu automatisieren und Teams produktiver zu machen.",
+    "Ich entwickle seit mehreren Jahren Softwarelösungen im ERP-Umfeld – von RPG-Anwendungen auf IBM i / AS400 über SQL Server Optimierungen bis hin zu Schnittstellen zwischen ERP- und Lagerverwaltungssystemen. In den letzten Monaten habe ich diesen Erfahrungsschatz gezielt um einen modernen Fullstack- und Cloud-Stack erweitert: eigene Produkte mit Next.js, React, TypeScript und FastAPI gebaut, containerisiert mit Docker und über GitHub Actions auf Vercel und Fly.io deployt, dazu PostgreSQL-Datenmodelle entworfen und KI-gestützte Anwendungen von der Idee bis zum produktiven Deployment umgesetzt. Mein Ziel ist es, klassische Business-Systeme und moderne Web-/KI-Technologien sinnvoll zu verbinden, um Prozesse zu automatisieren und Teams produktiver zu machen.",
   focusAreas: [
     "IBM i / AS400",
     "RPG",
     "SQL",
     "ERP-Systeme",
-    "C#",
-    "Python",
+    "Next.js & TypeScript",
+    "Python & FastAPI",
+    "Docker & CI/CD",
+    "Cloud (AWS, Vercel)",
     "KI-Anwendungen",
-    "Prozessautomatisierung",
+    "Fullstack-Entwicklung",
   ],
   location: "Deutschland",
   contact: {

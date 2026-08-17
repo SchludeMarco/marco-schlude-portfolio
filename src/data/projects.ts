@@ -33,6 +33,7 @@ export const projects: Project[] = [
     title: "QuerySage AI",
     category: "KI",
     featured: true,
+    resumeHighlight: true,
     role: "Konzeption & Entwicklung",
     shortDescription: "KI-gestützter SQL Review Assistent.",
     description:
@@ -124,6 +125,7 @@ export const projects: Project[] = [
     title: "WebSurface – App-Ideen für den Mittelstand",
     category: "Web",
     featured: true,
+    resumeHighlight: true,
     role: "Konzeption & Entwicklung",
     shortDescription:
       "Studien-/Portfolio-Prototyp, der mittelständischen Unternehmen passende App-Konzepte vorschlägt – per Branchenauswahl oder echter Analyse hochgeladener Geschäftsdaten.",
@@ -146,6 +148,23 @@ export const projects: Project[] = [
     links: [
       { label: "Live-Demo", url: "https://websurface.vercel.app" },
       { label: "GitHub", url: "https://github.com/SchludeMarco/websurface" },
+    ],
+  },
+  {
+    slug: "portfolio-cv-generator",
+    title: "Portfolio & CV Generator",
+    category: "Web",
+    featured: true,
+    resumeHighlight: true,
+    role: "Konzeption & Entwicklung",
+    shortDescription:
+      "Persönliche Portfolio-Plattform mit automatischer PDF-Lebenslauf-Generierung – Single Source of Truth für Website und Lebenslauf.",
+    description:
+      "Die eigene Portfolio-Website hält Profil, Berufserfahrung, Skills und Projekte in typisierten Datendateien. Ein Node-Skript generiert daraus per PDFKit den Lebenslauf als PDF, sodass Website und CV nie auseinanderlaufen – Inhalte werden an einer Stelle gepflegt, nicht doppelt.",
+    technologies: ["Next.js 16", "TypeScript", "Tailwind CSS 4", "shadcn/ui", "PDFKit"],
+    focus: ["Single Source of Truth", "PDF-Generierung", "Design-System"],
+    links: [
+      { label: "GitHub", url: "https://github.com/SchludeMarco/marco-schlude-portfolio" },
     ],
   },
 ];

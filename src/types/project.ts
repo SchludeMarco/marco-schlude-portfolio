@@ -19,6 +19,8 @@ export interface Project {
   focus?: string[];
   /** Hervorgehobenes Highlight-Projekt (z.B. auf der Startseite) */
   featured?: boolean;
+  /** In der Lebenslauf-PDF im Abschnitt "Ausgewählte Projekte" anzeigen */
+  resumeHighlight?: boolean;
   role?: string;
   duration?: string;
   period?: ExperiencePeriod;
