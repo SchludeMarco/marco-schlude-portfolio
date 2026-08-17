@@ -65,7 +65,26 @@ function rule(y) {
     .stroke();
 }
 
+// Measures a text block's height at a given font/size without drawing it,
+// so blocks (a heading + its content, a whole entry, …) can be kept together
+// across a page break instead of splitting mid-block.
+function heightOf(text, font, size, options = {}) {
+  doc.font(font).fontSize(size);
+  return doc.heightOfString(text, { width: contentWidth, ...options });
+}
+
+// Starts a new page if `height` of content wouldn't fit before the bottom margin.
+function ensureSpace(height) {
+  const bottom = doc.page.height - doc.page.margins.bottom;
+  if (doc.y + height > bottom) {
+    doc.addPage();
+  }
+}
+
 function sectionTitle(title) {
+  // Reserve room for the heading itself plus at least a bit of its content,
+  // so a section title never ends up alone at the bottom of a page.
+  ensureSpace(90);
   doc.moveDown(0.8);
   doc.fillColor(colors.accent)
     .font("Helvetica-Bold")
@@ -110,6 +129,24 @@ doc.fillColor(colors.text).font("Helvetica").fontSize(10).text(profile.focusArea
 // Experience
 sectionTitle("Berufserfahrung");
 experiences.forEach((exp, i) => {
+  let entryHeight = heightOf(`${exp.role}  ·  ${exp.company}`, "Helvetica-Bold", 11);
+  entryHeight += heightOf(
+    `${formatPeriod(exp.period)}${exp.location ? `  ·  ${exp.location}` : ""}`,
+    "Helvetica",
+    9.5
+  );
+  entryHeight += 6;
+  entryHeight += heightOf(exp.summary, "Helvetica", 10, { lineGap: 2 });
+  entryHeight += 5;
+  exp.tasks.forEach((task) => {
+    entryHeight += heightOf(`•  ${task}`, "Helvetica", 10, { lineGap: 1 });
+  });
+  if (exp.technologies?.length) {
+    entryHeight += 5;
+    entryHeight += heightOf(exp.technologies.join(" · "), "Helvetica-Oblique", 9.5);
+  }
+  ensureSpace(entryHeight + 8);
+
   doc.fillColor(colors.heading).font("Helvetica-Bold").fontSize(11).text(exp.role, {
     continued: true,
   });
@@ -146,15 +183,36 @@ experiences.forEach((exp, i) => {
 });
 
 // Skills
-sectionTitle("Kenntnisse");
 const grouped = getSkillsByCategory();
 const categories = Object.keys(grouped);
-categories.forEach((category, i) => {
-  doc.fillColor(colors.heading).font("Helvetica-Bold").fontSize(10.5).text(category);
-  doc.moveDown(0.2);
+// Compact section: keep every category together on one page rather than
+// stranding a single category (e.g. "DevOps") alone after a page break.
+const skillsSectionHeight = categories.reduce((sum, category) => {
   const line = grouped[category]
     .map((skill) => `${skill.name} (${skill.level})`)
     .join("  ·  ");
+  return (
+    sum +
+    heightOf(category, "Helvetica-Bold", 10.5) +
+    heightOf(line, "Helvetica", 9.5, { lineGap: 2 }) +
+    16
+  );
+}, 0);
+ensureSpace(skillsSectionHeight + 60);
+
+sectionTitle("Kenntnisse");
+categories.forEach((category, i) => {
+  const line = grouped[category]
+    .map((skill) => `${skill.name} (${skill.level})`)
+    .join("  ·  ");
+  const blockHeight =
+    heightOf(category, "Helvetica-Bold", 10.5) +
+    heightOf(line, "Helvetica", 9.5, { lineGap: 2 }) +
+    12;
+  ensureSpace(blockHeight);
+
+  doc.fillColor(colors.heading).font("Helvetica-Bold").fontSize(10.5).text(category);
+  doc.moveDown(0.2);
   doc.fillColor(colors.text).font("Helvetica").fontSize(9.5).text(line, {
     width: contentWidth,
     lineGap: 2,
@@ -163,8 +221,25 @@ categories.forEach((category, i) => {
 });
 
 // Certificates
+const certsSectionHeight = certificates.reduce((sum, cert) => {
+  const titleLine = `${cert.title}   ·   ${cert.issuer}`;
+  let h = heightOf(titleLine, "Helvetica-Bold", 10.5);
+  if (cert.description) {
+    h += heightOf(cert.description, "Helvetica", 9.5, { lineGap: 1 });
+  }
+  return sum + h + 14;
+}, 0);
+ensureSpace(certsSectionHeight + 60);
+
 sectionTitle("Zertifikate");
 certificates.forEach((cert, i) => {
+  const titleLine = `${cert.title}   ·   ${cert.issuer}`;
+  let certHeight = heightOf(titleLine, "Helvetica-Bold", 10.5);
+  if (cert.description) {
+    certHeight += heightOf(cert.description, "Helvetica", 9.5, { lineGap: 1 });
+  }
+  ensureSpace(certHeight + 8);
+
   doc.fillColor(colors.heading).font("Helvetica-Bold").fontSize(10.5).text(cert.title, {
     continued: true,
   });
