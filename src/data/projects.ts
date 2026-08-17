@@ -86,6 +86,40 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "casauto-real",
+    title: "CasAuto Real – Autohaus Royal",
+    category: "Web",
+    featured: true,
+    role: "Team-Projekt (2 Entwickler) – Konzeption & Entwicklung",
+    shortDescription:
+      "Vollwertige Fullstack-Plattform für ein Autohaus: Fahrzeugkatalog, Probefahrt-Buchung und Admin-Bereich, gebaut im Team mit einem Mitschüler.",
+    description:
+      "CasAuto Real ist eine im Team mit einem Mitschüler entwickelte Fullstack-Plattform für ein fiktives Autohaus. Das Frontend bietet einen filterbaren Fahrzeugkatalog (Marke, Kategorie, Kraftstoff, Preis, Baujahr) in Deutsch, Englisch und Spanisch, Probefahrt-Buchung ohne Account, Merkliste und einen Fahrzeugvergleich für eingeloggte Kunden. Das Backend stellt eine JWT-gesicherte REST-API samt Admin-Bereich zur Fahrzeug- und Terminverwaltung bereit. Die Infrastruktur (VPC, EC2, MySQL) ist vollständig als Terraform-Code beschrieben; produktiv läuft das Frontend auf Vercel, Backend und Datenbank auf AWS EC2.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Zustand",
+      "NestJS",
+      "TypeORM",
+      "MySQL",
+      "Docker",
+      "Terraform",
+      "AWS",
+    ],
+    focus: [
+      "Fullstack-Architektur",
+      "REST-API & Authentifizierung",
+      "Infrastructure-as-Code",
+      "Teamarbeit",
+    ],
+    links: [
+      { label: "Live-Demo", url: "https://cas-auto-real-web.vercel.app" },
+      { label: "GitHub", url: "https://github.com/Lucasle6/CasAuto-Real" },
+    ],
+  },
+  {
     slug: "websurface",
     title: "WebSurface – App-Ideen für den Mittelstand",
     category: "Web",
