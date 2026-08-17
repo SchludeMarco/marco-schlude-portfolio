@@ -101,15 +101,27 @@ doc.fillColor(colors.heading).font("Helvetica-Bold").fontSize(24).text(profile.n
 doc.fillColor(colors.accent).font("Helvetica").fontSize(13).text(profile.title);
 doc.moveDown(0.6);
 
-const contactParts = [
-  profile.contact.email,
-  profile.contact.phone,
-  profile.contact.location,
-  profile.contact.linkedin?.replace(/^https?:\/\//, ""),
-  profile.contact.github?.replace(/^https?:\/\//, ""),
+// Rendered as short, clickable labels (not full URLs) so long link text
+// can't get broken mid-word (e.g. "github.com/" wrapping before the
+// username) by pdfkit's line layout.
+const contactText = [profile.contact.email, profile.contact.phone, profile.contact.location]
+  .filter(Boolean)
+  .join("   ·   ");
+const contactLinks = [
+  profile.contact.linkedin && { label: "LinkedIn", url: profile.contact.linkedin },
+  profile.contact.github && { label: "GitHub", url: profile.contact.github },
 ].filter(Boolean);
 
-doc.fillColor(colors.muted).font("Helvetica").fontSize(9.5).text(contactParts.join("   ·   "));
+doc.font("Helvetica").fontSize(9.5);
+doc.fillColor(colors.muted).text(contactText, { continued: contactLinks.length > 0 });
+contactLinks.forEach((link, i) => {
+  doc.fillColor(colors.muted).text("   ·   ", { continued: true });
+  doc.fillColor(colors.accent).text(link.label, {
+    link: link.url,
+    underline: true,
+    continued: i < contactLinks.length - 1,
+  });
+});
 doc.moveDown(0.6);
 rule(doc.y);
 

@@ -28,13 +28,13 @@ export const experiences: Experience[] = [
       end: "2022-12",
     },
     summary:
-      "RPG- und IBM i / AS400-Entwicklung mit Fokus auf ERP-Anpassungen, Migration von Fixed auf Free RPG sowie Entwicklung einer Schnittstelle zwischen Protex ERP und ASAP LVS.",
+      "RPG- und IBM i / AS400-Entwicklung mit Fokus auf ERP-Anpassungen, Migration von Fixed auf Free RPG sowie Entwicklung und Einführung einer Schnittstelle zwischen Protex ERP und ASAP LVS zur automatisierten Datenintegration zwischen ERP und Lagerverwaltungssystem.",
     tasks: [
       "RPG Entwicklung",
       "IBM i / AS400 Entwicklung",
       "ERP-Anpassungen",
       "Migration von Fixed RPG auf Free RPG",
-      "Entwicklung einer Schnittstelle zwischen Protex ERP und ASAP LVS",
+      "Entwicklung und Einführung einer Schnittstelle zwischen Protex ERP und ASAP LVS zur automatisierten Datenintegration zwischen ERP und Lagerverwaltungssystem (ca. 1,5 Jahre)",
     ],
     technologies: ["IBM i", "AS400", "RPG", "Free RPG", "Protex ERP", "ASAP LVS", "SQL"],
   },
