@@ -32,7 +32,7 @@ export const projects: Project[] = [
     slug: "querysage-ai",
     title: "QuerySage AI",
     category: "KI",
-    featured: false,
+    featured: true,
     role: "Konzeption & Entwicklung",
     shortDescription: "KI-gestützter SQL Review Assistent.",
     description:
