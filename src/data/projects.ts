@@ -85,6 +85,35 @@ export const projects: Project[] = [
       { label: "GitHub", url: "https://github.com/SchludeMarco/smartcraft-baustellenanalyse" },
     ],
   },
+  {
+    slug: "websurface",
+    title: "WebSurface – App-Ideen für den Mittelstand",
+    category: "Web",
+    featured: true,
+    role: "Konzeption & Entwicklung",
+    shortDescription:
+      "Studien-/Portfolio-Prototyp, der mittelständischen Unternehmen passende App-Konzepte vorschlägt – per Branchenauswahl oder echter Analyse hochgeladener Geschäftsdaten.",
+    description:
+      "WebSurface schlägt mittelständischen Unternehmen passende App-Konzepte vor – entweder anhand ausgewählter Branchen (Dienstleistungen, Handel, Industrie & Verarbeitendes Gewerbe, Baugewerbe & Handwerk) mit kuratiertem Ideen-Katalog, oder anhand einer echten, regelbasierten Analyse hochgeladener CSV-Verkaufsdaten (Saisonalität, Kategorie-Konzentration) – bewusst keine Blackbox und ohne externe API-Calls. Bewusste Abgrenzung: WebSurface generiert keinen Produktivcode, sondern geprüfte Konzept-Briefs als Entscheidungsgrundlage. Ergänzt um eine vollständige, ehrliche Datenschutzerklärung sowie einen vollständigen AWS-Zielaufbau als reviewbarer CDK-Code (VPC, ALB, ECS/Fargate, RDS, KMS, Secrets Manager, IAM) – als Infrastruktur-Nachweis bewusst nicht deployed.",
+    technologies: [
+      "Next.js 16",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "Prisma ORM",
+      "PostgreSQL",
+      "AWS CDK",
+    ],
+    focus: [
+      "Regelbasierte Datenanalyse",
+      "Datenschutz",
+      "Infrastructure-as-Code",
+      "Produktkonzeption",
+    ],
+    links: [
+      { label: "Live-Demo", url: "https://websurface.vercel.app" },
+      { label: "GitHub", url: "https://github.com/SchludeMarco/websurface" },
+    ],
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
