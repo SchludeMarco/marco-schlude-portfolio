@@ -85,30 +85,6 @@ export const projects: Project[] = [
       { label: "GitHub", url: "https://github.com/SchludeMarco/smartcraft-baustellenanalyse" },
     ],
   },
-  {
-    slug: "schlaufuchs",
-    title: "Schlaufuchs",
-    category: "Web",
-    featured: false,
-    role: "Konzeption & Entwicklung",
-    shortDescription:
-      "Kinderfreundliche Lern-WebApp mit sechs Lernspielen, Punkten und Achievements.",
-    description:
-      "Schlaufuchs ist eine Lern-WebApp für Kinder im Grundschulalter (ca. 6–9 Jahre): sechs Lernspiele zu Mathe, Gedächtnis, Farben, Lesen, Sprache und Quiz, mit Punkten, Leveln und Auszeichnungen. Die App unterscheidet vier Rollen – Schüler:innen, Eltern, Lehrer:innen, Administrator:innen – mit eigenem Bereich und eigener Farbwelt je Rolle. Aus einem reinen Figma-Make-Export wurde ein eigenständiges Vite/React/TypeScript-Projekt mit Supabase-Backend (Auth + Edge Functions). Ehrlich eingeordnet: Der Schüler-Bereich ist vollständig fertig und funktioniert durchgehend; Eltern-, Lehrer- und Admin-Bereich existieren aktuell als Oberfläche ohne vollständige Backend-Anbindung.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "Tailwind CSS",
-      "Supabase (Auth, Edge Functions)",
-      "shadcn/ui",
-    ],
-    focus: [
-      "Kindgerechtes UX-Design",
-      "Rollenbasierte Bereiche",
-      "Gamification (Punkte, Level, Achievements)",
-    ],
-  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
