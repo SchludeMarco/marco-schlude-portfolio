@@ -30,5 +30,4 @@ export const profile: Profile = {
     label: "Auf Anfrage verfügbar",
     note: "Offen für neue Projekte und Festanstellungen im ERP- und KI-Umfeld.",
   },
-  resumeUrl: "/resume/marco-schlude-lebenslauf.pdf",
 };

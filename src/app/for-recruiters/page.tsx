@@ -26,10 +26,12 @@ export default function ForRecruitersPage() {
         <p className="mt-4 max-w-2xl text-muted-foreground">{profile.bio}</p>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button nativeButton={false} render={<a href={profile.resumeUrl} />}>
-            <Download className="size-4" />
-            Lebenslauf herunterladen
-          </Button>
+          {profile.resumeUrl && (
+            <Button nativeButton={false} render={<a href={profile.resumeUrl} />}>
+              <Download className="size-4" />
+              Lebenslauf herunterladen
+            </Button>
+          )}
           <Button
             variant="outline"
             nativeButton={false}
