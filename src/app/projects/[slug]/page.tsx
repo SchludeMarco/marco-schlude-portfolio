@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Section } from "@/components/shared/section";
 import { getProjectBySlug, projects } from "@/data/projects";
 
@@ -58,6 +59,22 @@ export default async function ProjectDetailPage(
         <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
           {project.shortDescription}
         </p>
+
+        {project.links && (
+          <div className="mt-6 flex flex-wrap gap-3">
+            {project.links.map((link) => (
+              <Button
+                key={link.url}
+                variant="outline"
+                nativeButton={false}
+                render={<a href={link.url} target="_blank" rel="noreferrer" />}
+              >
+                {link.label}
+                <ArrowUpRight className="size-4" />
+              </Button>
+            ))}
+          </div>
+        )}
 
         <dl className="mt-8 grid max-w-2xl grid-cols-2 gap-4 text-sm sm:grid-cols-3">
           {project.duration && (
