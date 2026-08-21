@@ -34,3 +34,7 @@ export const certificates: Certificate[] = [
       "Grundlagen und Praxis von DevOps-Methoden, Systemadministration und Deployment.",
   },
 ];
+
+export function getCertificateById(id: string): Certificate | undefined {
+  return certificates.find((certificate) => certificate.id === id);
+}
