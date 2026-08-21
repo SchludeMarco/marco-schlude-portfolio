@@ -2,6 +2,8 @@
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { formatPeriod } from "@/lib/format";
 import type { Experience } from "@/types";
@@ -69,6 +71,14 @@ export function ExperienceTimeline({ experiences }: { experiences: Experience[] 
               ))}
             </div>
           )}
+
+          <Link
+            href={`/experience/${experience.id}`}
+            className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-foreground hover:underline"
+          >
+            Mehr zu dieser Station
+            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
         </motion.li>
       ))}
     </motion.ol>

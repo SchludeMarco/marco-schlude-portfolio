@@ -39,3 +39,7 @@ export const experiences: Experience[] = [
     technologies: ["IBM i", "AS400", "RPG", "Free RPG", "Protex ERP", "ASAP LVS", "SQL"],
   },
 ];
+
+export function getExperienceById(id: string): Experience | undefined {
+  return experiences.find((experience) => experience.id === id);
+}
