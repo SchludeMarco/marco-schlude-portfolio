@@ -19,9 +19,9 @@ const heroSkills = [
 export function HeroSection() {
   const yearsExperience = Math.max(...skills.map((skill) => skill.experienceYears));
   const stats = [
-    { value: `${yearsExperience}+`, label: "Jahre Erfahrung" },
-    { value: `${projects.length}`, label: "Projekte" },
-    { value: `${certificates.length}`, label: "Zertifikate" },
+    { value: `${yearsExperience}+`, label: "Jahre Erfahrung", href: "/#experience" },
+    { value: `${projects.length}`, label: "Projekte", href: "/#projects" },
+    { value: `${certificates.length}`, label: "Zertifikate", href: "/#certificates" },
   ];
 
   return (
@@ -52,12 +52,18 @@ export function HeroSection() {
 
         <StaggerItem className="flex flex-wrap items-center gap-x-8 gap-y-2">
           {stats.map((stat) => (
-            <div key={stat.label} className="flex items-baseline gap-2">
-              <span className="text-2xl font-semibold tracking-tight">
+            <Link
+              key={stat.label}
+              href={stat.href}
+              className="group flex items-baseline gap-2"
+            >
+              <span className="text-2xl font-semibold tracking-tight group-hover:underline">
                 {stat.value}
               </span>
-              <span className="text-sm text-muted-foreground">{stat.label}</span>
-            </div>
+              <span className="text-sm text-muted-foreground group-hover:text-foreground">
+                {stat.label}
+              </span>
+            </Link>
           ))}
         </StaggerItem>
 
