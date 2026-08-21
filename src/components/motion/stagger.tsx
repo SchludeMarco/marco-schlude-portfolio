@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
@@ -26,8 +26,13 @@ interface StaggerProps {
 
 export function StaggerGroup({ children, className, mode = "view" }: StaggerProps) {
   const shouldReduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
-  if (shouldReduceMotion) {
+  // See Reveal for why this is gated on `mounted`: shouldReduceMotion
+  // differs between server (always null) and the client's first render,
+  // so branching on it immediately would cause a hydration mismatch.
+  if (mounted && shouldReduceMotion) {
     return <div className={className}>{children}</div>;
   }
 
@@ -47,8 +52,10 @@ export function StaggerGroup({ children, className, mode = "view" }: StaggerProp
 
 export function StaggerItem({ children, className }: StaggerProps) {
   const shouldReduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
-  if (shouldReduceMotion) {
+  if (mounted && shouldReduceMotion) {
     return <div className={className}>{children}</div>;
   }
 

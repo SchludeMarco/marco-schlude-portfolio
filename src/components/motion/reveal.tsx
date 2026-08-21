@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
@@ -13,8 +13,15 @@ interface RevealProps {
 
 export function Reveal({ children, delay = 0, className }: RevealProps) {
   const shouldReduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
-  if (shouldReduceMotion) {
+  // shouldReduceMotion reads matchMedia synchronously on the client but is
+  // always null during SSR — branching on it before mount would render a
+  // different element on the client's first pass than the server sent,
+  // which React flags as a hydration mismatch. Gating on `mounted` keeps
+  // the first client render identical to the server, then swaps after.
+  if (mounted && shouldReduceMotion) {
     return <div className={className}>{children}</div>;
   }
 

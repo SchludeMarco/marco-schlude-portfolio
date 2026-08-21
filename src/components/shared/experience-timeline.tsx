@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { formatPeriod } from "@/lib/format";
 import type { Experience } from "@/types";
@@ -19,20 +20,26 @@ const itemVariants: Variants = {
 
 export function ExperienceTimeline({ experiences }: { experiences: Experience[] }) {
   const shouldReduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  // shouldReduceMotion differs between SSR and the client's first render
+  // (see Reveal/StaggerGroup) — only honor it once mounted, so hydration
+  // sees the same animated markup the server sent.
+  const reduceMotion = mounted && shouldReduceMotion;
 
   return (
     <motion.ol
       className="flex flex-col gap-10"
-      variants={shouldReduceMotion ? undefined : containerVariants}
-      initial={shouldReduceMotion ? undefined : "hidden"}
-      whileInView={shouldReduceMotion ? undefined : "show"}
+      variants={reduceMotion ? undefined : containerVariants}
+      initial={reduceMotion ? undefined : "hidden"}
+      whileInView={reduceMotion ? undefined : "show"}
       viewport={{ once: true, margin: "-60px" }}
     >
       {experiences.map((experience) => (
         <motion.li
           key={experience.id}
           className="relative border-l border-border pl-6"
-          variants={shouldReduceMotion ? undefined : itemVariants}
+          variants={reduceMotion ? undefined : itemVariants}
         >
           <span className="absolute top-1.5 -left-[5px] size-2.5 rounded-full bg-brand" />
 
