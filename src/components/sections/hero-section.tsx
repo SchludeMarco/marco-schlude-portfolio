@@ -1,11 +1,29 @@
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { AvailabilityBadge } from "@/components/shared/availability-badge";
 import { StaggerGroup, StaggerItem } from "@/components/motion/stagger";
 import { profile } from "@/data/profile";
+import { skills, projects, certificates } from "@/data";
+
+const heroSkills = [
+  "IBM i / AS400",
+  "SQL",
+  "RPG",
+  "Next.js & TypeScript",
+  "Python & FastAPI",
+  "KI-Anwendungen",
+];
 
 export function HeroSection() {
+  const yearsExperience = Math.max(...skills.map((skill) => skill.experienceYears));
+  const stats = [
+    { value: `${yearsExperience}+`, label: "Jahre Erfahrung" },
+    { value: `${projects.length}`, label: "Projekte" },
+    { value: `${certificates.length}`, label: "Zertifikate" },
+  ];
+
   return (
     <section className="border-b border-border/60">
       <StaggerGroup
@@ -30,6 +48,25 @@ export function HeroSection() {
           <p className="max-w-xl text-balance text-muted-foreground">
             {profile.tagline}
           </p>
+        </StaggerItem>
+
+        <StaggerItem className="flex flex-wrap items-center gap-x-8 gap-y-2">
+          {stats.map((stat) => (
+            <div key={stat.label} className="flex items-baseline gap-2">
+              <span className="text-2xl font-semibold tracking-tight">
+                {stat.value}
+              </span>
+              <span className="text-sm text-muted-foreground">{stat.label}</span>
+            </div>
+          ))}
+        </StaggerItem>
+
+        <StaggerItem className="flex flex-wrap gap-2">
+          {heroSkills.map((skill) => (
+            <Badge key={skill} variant="outline">
+              {skill}
+            </Badge>
+          ))}
         </StaggerItem>
 
         <StaggerItem className="mt-2 flex flex-wrap gap-3">
