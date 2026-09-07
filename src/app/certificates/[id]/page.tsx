@@ -66,8 +66,44 @@ export default async function CertificateDetailPage(
           {certificate.date ? ` · ${certificate.date}` : ""}
         </p>
 
+        {certificate.organization && (
+          <p className="mt-1 text-sm text-muted-foreground">
+            {certificate.organization}
+          </p>
+        )}
+
+        {certificate.accreditations && (
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {certificate.accreditations.map((accreditation) => (
+              <Badge key={accreditation} variant="secondary">
+                {accreditation}
+              </Badge>
+            ))}
+          </div>
+        )}
+
         {certificate.description && (
           <p className="mt-8 max-w-2xl">{certificate.description}</p>
+        )}
+
+        {certificate.duration && (
+          <p className="mt-6 text-sm">
+            <span className="text-muted-foreground">Umfang: </span>
+            {certificate.duration}
+          </p>
+        )}
+
+        {certificate.competencies && (
+          <div className="mt-8">
+            <h2 className="text-sm font-medium text-muted-foreground">
+              Erlernte Kompetenzen
+            </h2>
+            <ul className="mt-3 list-disc space-y-1 pl-5">
+              {certificate.competencies.map((competency) => (
+                <li key={competency}>{competency}</li>
+              ))}
+            </ul>
+          </div>
         )}
 
         {relatedProject && (
