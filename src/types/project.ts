@@ -1,6 +1,6 @@
 import type { ExperiencePeriod } from "./experience";
 
-export type ProjectCategory = "ERP" | "KI" | "Web" | "Automatisierung";
+export type ProjectCategory = "ERP" | "KI" | "Web" | "Automatisierung" | "Cloud";
 
 export interface ProjectLink {
   label: string;
@@ -27,4 +27,6 @@ export interface Project {
   links?: ProjectLink[];
   coverImage?: string;
   gallery?: string[];
+  /** Verweist auf ein zugehöriges Zertifikat, z.B. das IHK-Abschlussprojekt */
+  relatedCertificateId?: string;
 }

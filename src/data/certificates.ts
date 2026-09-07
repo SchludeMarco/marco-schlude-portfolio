@@ -38,9 +38,10 @@ export const certificates: Certificate[] = [
     title: "Cloud Business Expert (IHK)",
     issuer: "IHK",
     category: "Cloud",
-    date: "September 2026",
+    date: "Prüfung bestanden im September 2026",
     description:
-      "IHK-Prüfung zum Cloud Business Expert erfolgreich abgeschlossen – Kompetenzen in Cloud-Strategie, -Beratung und -Geschäftsmodellen.",
+      "IHK-Prüfung zum Cloud Business Expert im September 2026 erfolgreich bestanden – das Zertifikat wird in Kürze nachgereicht. Kompetenzen in Cloud-Strategie, -Beratung und -Geschäftsmodellen, nachgewiesen im Abschlussprojekt zur Cloud-Migration einer SQL-Analyseplattform.",
+    relatedProjectSlug: "cloud-strategie-sql-analyseplattform",
   },
 ];
 

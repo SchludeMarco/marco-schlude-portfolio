@@ -189,6 +189,18 @@ export const skills: Skill[] = [
     description: "Konzeption KI-gestützter Anwendungen auf Basis generativer Modelle.",
   },
 
+  // Cloud
+  {
+    id: "azure-cloud-architecture",
+    name: "Cloud-Architektur & -Strategie (Azure)",
+    category: "Cloud",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description:
+      "Konzeption von Cloud-Zielarchitekturen, systematischer Anbietervergleich und Migrationsstrategien – Kernthema des IHK-Abschlussprojekts zum Cloud Business Expert.",
+  },
+
   // DevOps
   {
     id: "docker",

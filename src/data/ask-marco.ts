@@ -42,6 +42,14 @@ export const askMarcoEntries: AskMarcoEntry[] = [
     keywords: ["verfügbar", "verfuegbar", "start", "kontakt"],
   },
   {
+    id: "cloud-strategie",
+    question: "Kann Marco auch Cloud-Architekturen planen?",
+    answer:
+      "Ja. Im Rahmen des IHK-Abschlussprojekts zum Cloud Business Expert hat Marco für ein fiktives Unternehmen eine vollständige Cloud-Strategie entwickelt: Anbietervergleich (Azure, AWS, Google Cloud, IONOS, Hetzner), eine Azure-Zielarchitektur, ein Sicherheits- und Compliance-Konzept sowie eine Migrations- und Kostenanalyse. Die Prüfung wurde im September 2026 bestanden, das Zertifikat folgt in Kürze.",
+    category: "Cloud",
+    keywords: ["cloud", "azure", "architektur", "migration", "strategie"],
+  },
+  {
     id: "zertifikate",
     question: "Welche Zertifikate hat Marco?",
     answer:

@@ -12,4 +12,6 @@ export interface Certificate {
   category: CertificateCategory;
   date?: string;
   description?: string;
+  /** Verweist auf das Projekt, das dem Zertifikat zugrunde liegt, z.B. ein IHK-Abschlussprojekt */
+  relatedProjectSlug?: string;
 }

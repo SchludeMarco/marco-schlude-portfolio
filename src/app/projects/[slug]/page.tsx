@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/shared/section";
 import { getProjectBySlug, projects } from "@/data/projects";
+import { getCertificateById } from "@/data/certificates";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -37,6 +38,10 @@ export default async function ProjectDetailPage(
   if (!project) {
     notFound();
   }
+
+  const relatedCertificate = project.relatedCertificateId
+    ? getCertificateById(project.relatedCertificateId)
+    : undefined;
 
   return (
     <main className="flex-1">
@@ -133,6 +138,26 @@ export default async function ProjectDetailPage(
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {relatedCertificate && (
+          <div className="mt-8 max-w-2xl rounded-lg border border-border/60 bg-muted/30 p-4">
+            <p className="text-sm text-muted-foreground">
+              Zugehöriges Zertifikat
+            </p>
+            <Link
+              href={`/certificates/${relatedCertificate.id}`}
+              className="mt-1 inline-flex items-center gap-1.5 font-medium hover:underline"
+            >
+              {relatedCertificate.title}
+              <ArrowUpRight className="size-4" />
+            </Link>
+            {relatedCertificate.date && (
+              <p className="mt-1 text-sm text-muted-foreground">
+                {relatedCertificate.date}
+              </p>
+            )}
           </div>
         )}
       </Section>
