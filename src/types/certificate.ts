@@ -1,7 +1,6 @@
 export type CertificateCategory =
   | "KI"
   | "Prozessautomatisierung"
-  | "DevOps"
   | "ERP"
   | "Cloud";
 

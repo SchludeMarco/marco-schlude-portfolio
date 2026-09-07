@@ -62,14 +62,6 @@ export const certificates: Certificate[] = [
       "Modul „Prozessautomatisierung mit Prompting & Agenten\" im Rahmen der Qualifizierung „KI & digitale Prozessoptimierung\". Entwicklung und Feinabstimmung komplexer LLM-Kontexte mittels RAG, Umsetzung von End-to-End-KI-Workflows zur Prozessautomatisierung sowie Konzeption und Steuerung autonomer Multi-Agenten-Systeme für anspruchsvolle Aufgaben.",
   },
   {
-    id: "devops-administration",
-    title: "DevOps & Administration",
-    issuer: "Syntax Institut",
-    category: "DevOps",
-    description:
-      "Grundlagen und Praxis von DevOps-Methoden, Systemadministration und Deployment.",
-  },
-  {
     id: "cloud-business-expert-ihk",
     title: "Cloud Business Expert (IHK)",
     issuer: "IHK",
