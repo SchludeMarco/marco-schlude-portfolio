@@ -2,7 +2,8 @@ export type CertificateCategory =
   | "KI"
   | "Prozessautomatisierung"
   | "DevOps"
-  | "ERP";
+  | "ERP"
+  | "Cloud";
 
 export interface Certificate {
   id: string;
@@ -11,4 +12,6 @@ export interface Certificate {
   category: CertificateCategory;
   date?: string;
   description?: string;
+  /** Verweist auf das Projekt, das dem Zertifikat zugrunde liegt, z.B. ein IHK-Abschlussprojekt */
+  relatedProjectSlug?: string;
 }

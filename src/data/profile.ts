@@ -16,7 +16,7 @@ export const profile: Profile = {
     "Next.js & TypeScript",
     "Python & FastAPI",
     "Docker & CI/CD",
-    "Cloud (AWS, Vercel)",
+    "Cloud-Architektur & -Strategie (Azure, AWS)",
     "KI-Anwendungen",
     "Fullstack-Entwicklung",
   ],

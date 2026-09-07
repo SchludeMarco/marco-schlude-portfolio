@@ -2,6 +2,37 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    slug: "cloud-strategie-sql-analyseplattform",
+    title: "Cloud-Strategie für eine Cloud-native SQL-Analyseplattform",
+    category: "Cloud",
+    featured: true,
+    resumeHighlight: true,
+    role: "Cloud-Architektur & -Strategie (IHK-Abschlussprojekt)",
+    relatedCertificateId: "cloud-business-expert-ihk",
+    shortDescription:
+      "IHK-Abschlussprojekt: Cloud-Strategie für die Migration einer On-Premises-SQL-Analyseplattform auf Microsoft Azure.",
+    description:
+      "Für ein fiktives mittelständisches Unternehmen (TechSolutions GmbH, 15 Mitarbeitende, B2B) wurde eine vollständige Cloud-Strategie zur Migration einer bestehenden On-Premises-SQL-Analyseplattform entwickelt. Ausgehend von einer Anforderungs- und SWOT-Analyse folgte ein systematischer Vergleich von Microsoft Azure, AWS, Google Cloud, IONOS und Hetzner anhand einer gewichteten Entscheidungsmatrix. Auf Basis der Auswahl von Microsoft Azure entstand eine PaaS-/FaaS-Zielarchitektur mit Azure App Service, Functions, SQL Database und Blob Storage sowie Front Door/WAF und Private Endpoints, ergänzt um ein Sicherheits- und Compliance-Konzept, eine begründete Entscheidung für einen Replatform-Migrationsansatz sowie eine Kostenanalyse mit konkreten Optimierungspotenzialen. Anders als die übrigen Projekte liegt der Fokus hier nicht auf Implementierung, sondern auf Architekturplanung, Anbieterbewertung und der wirtschaftlichen Begründung technischer Entscheidungen. Die zugehörige Abschlussprüfung zum Cloud Business Expert (IHK) wurde im September 2026 erfolgreich bestanden; das Zertifikat wird in Kürze nachgereicht.",
+    technologies: [
+      "Microsoft Azure",
+      "Azure App Service",
+      "Azure Functions",
+      "Azure SQL Database",
+      "Azure Blob Storage",
+      "Azure Front Door & WAF",
+      "Private Endpoints",
+      "Azure Monitor / Application Insights",
+      "Cloud-Migration (Replatforming)",
+      "Azure Pricing Calculator",
+    ],
+    focus: [
+      "Cloud-Architektur & Anbieterbewertung",
+      "Migrationsstrategie (Replatforming)",
+      "IT-Security & Compliance",
+      "Kostenoptimierung & Wirtschaftlichkeit",
+    ],
+  },
+  {
     slug: "erp-lvs-integration",
     title: "ERP-LVS Integration",
     category: "ERP",
@@ -26,35 +57,6 @@ export const projects: Project[] = [
       "Prozessautomatisierung",
       "Stabilität",
       "Produktivbetrieb",
-    ],
-  },
-  {
-    slug: "querysage-ai",
-    title: "QuerySage AI",
-    category: "KI",
-    featured: true,
-    resumeHighlight: true,
-    role: "Konzeption & Entwicklung",
-    shortDescription: "KI-gestützter SQL Review Assistent.",
-    description:
-      "QuerySage AI ist ein KI-gestützter Assistent, der SQL-Abfragen automatisiert analysiert, bewertet und Verbesserungsvorschläge liefert. Ziel ist es, Entwicklerinnen und Entwicklern schnelles, konsistentes Feedback zu Performance und Sicherheit ihrer Queries zu geben, bevor diese in Produktion gehen.",
-    technologies: [
-      "Python",
-      "FastAPI",
-      "Ollama",
-      "Llama 3.1",
-      "Docker",
-      "Fly.io",
-      "JavaScript",
-      "HTML",
-      "CSS",
-    ],
-    features: [
-      "SQL Analyse",
-      "Performancebewertung",
-      "Sicherheitsanalyse",
-      "Verbesserungsvorschläge",
-      "Bewertungssystem",
     ],
   },
   {

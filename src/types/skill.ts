@@ -4,6 +4,7 @@ export type SkillCategory =
   | "Backend"
   | "Frontend"
   | "KI"
+  | "Cloud"
   | "DevOps";
 
 export type SkillLevel =

@@ -13,9 +13,9 @@ export const askMarcoEntries: AskMarcoEntry[] = [
     id: "ki-erfahrung",
     question: "Welche KI-Kompetenzen bringt Marco mit?",
     answer:
-      "Marco beschäftigt sich mit Prompt-Engineering, KI-Agenten, generativer KI und lokalen LLMs (z.B. via Ollama). Ein Beispiel ist QuerySage AI, ein selbst entwickelter KI-gestützter SQL Review Assistent.",
+      "Marco beschäftigt sich mit Prompt-Engineering, KI-Agenten, generativer KI und lokalen LLMs (z.B. via Ollama). Ein Beispiel ist Sm@rtCraft, eine selbst konzipierte und entwickelte KI-Webanwendung, die Baustellen- und Heimwerkerprobleme per Foto oder Beschreibung analysiert.",
     category: "KI",
-    keywords: ["ki", "ai", "llm", "prompting", "ollama", "querysage"],
+    keywords: ["ki", "ai", "llm", "prompting", "ollama", "smartcraft"],
   },
   {
     id: "programmiersprachen",
@@ -42,12 +42,20 @@ export const askMarcoEntries: AskMarcoEntry[] = [
     keywords: ["verfügbar", "verfuegbar", "start", "kontakt"],
   },
   {
+    id: "cloud-strategie",
+    question: "Kann Marco auch Cloud-Architekturen planen?",
+    answer:
+      "Ja. Im Rahmen des IHK-Abschlussprojekts zum Cloud Business Expert hat Marco für ein fiktives Unternehmen eine vollständige Cloud-Strategie entwickelt: Anbietervergleich (Azure, AWS, Google Cloud, IONOS, Hetzner), eine Azure-Zielarchitektur, ein Sicherheits- und Compliance-Konzept sowie eine Migrations- und Kostenanalyse. Die Prüfung wurde im September 2026 bestanden, das Zertifikat folgt in Kürze.",
+    category: "Cloud",
+    keywords: ["cloud", "azure", "architektur", "migration", "strategie"],
+  },
+  {
     id: "zertifikate",
     question: "Welche Zertifikate hat Marco?",
     answer:
-      "Unter anderem den IHK-Abschluss 'KI Anwendungsspezialist' sowie Qualifikationen in Generative AI & LLMs, Prozessautomatisierung mit Prompting & Agenten und DevOps & Administration.",
+      "Unter anderem die IHK-Abschlüsse 'KI Anwendungsspezialist' und 'Cloud Business Expert' sowie Qualifikationen in Generative AI & LLMs, Prozessautomatisierung mit Prompting & Agenten und DevOps & Administration.",
     category: "Zertifikate",
-    keywords: ["zertifikat", "ihk", "qualifikation", "abschluss"],
+    keywords: ["zertifikat", "ihk", "qualifikation", "abschluss", "cloud"],
   },
 ];
 

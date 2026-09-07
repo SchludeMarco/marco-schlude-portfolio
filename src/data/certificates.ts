@@ -12,7 +12,7 @@ export const certificates: Certificate[] = [
   {
     id: "generative-ai-llms",
     title: "Generative AI & LLMs",
-    issuer: "Syntax Institut",
+    issuer: "Syntax Institut, IHK-geprüft",
     category: "KI",
     description:
       "Vertiefung zu generativer KI und Large Language Models sowie deren praktischem Einsatz.",
@@ -32,6 +32,16 @@ export const certificates: Certificate[] = [
     category: "DevOps",
     description:
       "Grundlagen und Praxis von DevOps-Methoden, Systemadministration und Deployment.",
+  },
+  {
+    id: "cloud-business-expert-ihk",
+    title: "Cloud Business Expert (IHK)",
+    issuer: "IHK",
+    category: "Cloud",
+    date: "Prüfung bestanden im September 2026",
+    description:
+      "IHK-Prüfung zum Cloud Business Expert im September 2026 erfolgreich bestanden – das Zertifikat wird in Kürze nachgereicht. Kompetenzen in Cloud-Strategie, -Beratung und -Geschäftsmodellen, nachgewiesen im Abschlussprojekt zur Cloud-Migration einer SQL-Analyseplattform.",
+    relatedProjectSlug: "cloud-strategie-sql-analyseplattform",
   },
 ];
 

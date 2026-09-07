@@ -14,6 +14,7 @@ const heroSkills = [
   "Next.js & TypeScript",
   "Python & FastAPI",
   "KI-Anwendungen",
+  "Cloud-Architektur",
 ];
 
 export function HeroSection() {

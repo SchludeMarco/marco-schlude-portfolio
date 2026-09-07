@@ -129,7 +129,7 @@ export const skills: Skill[] = [
     level: "Fortgeschritten",
     levelScore: 3,
     experienceYears: 1,
-    description: "Umsetzung von Web-Oberflächen für KI-Anwendungen wie QuerySage AI.",
+    description: "Umsetzung von Web-Oberflächen für eigene KI-Anwendungen.",
   },
   {
     id: "typescript",
@@ -187,6 +187,18 @@ export const skills: Skill[] = [
     levelScore: 3,
     experienceYears: 1,
     description: "Konzeption KI-gestützter Anwendungen auf Basis generativer Modelle.",
+  },
+
+  // Cloud
+  {
+    id: "azure-cloud-architecture",
+    name: "Cloud-Architektur & -Strategie (Azure)",
+    category: "Cloud",
+    level: "Fortgeschritten",
+    levelScore: 3,
+    experienceYears: 1,
+    description:
+      "Konzeption von Cloud-Zielarchitekturen, systematischer Anbietervergleich und Migrationsstrategien – Kernthema des IHK-Abschlussprojekts zum Cloud Business Expert.",
   },
 
   // DevOps

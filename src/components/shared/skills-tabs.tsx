@@ -13,6 +13,7 @@ const categoryOrder: SkillCategory[] = [
   "Backend",
   "Frontend",
   "KI",
+  "Cloud",
   "DevOps",
 ];
 
