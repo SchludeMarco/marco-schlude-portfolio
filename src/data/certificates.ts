@@ -12,7 +12,7 @@ export const certificates: Certificate[] = [
   {
     id: "generative-ai-llms",
     title: "Generative AI & LLMs",
-    issuer: "Syntax Institut",
+    issuer: "Syntax Institut, IHK-geprüft",
     category: "KI",
     description:
       "Vertiefung zu generativer KI und Large Language Models sowie deren praktischem Einsatz.",

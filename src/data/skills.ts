@@ -129,7 +129,7 @@ export const skills: Skill[] = [
     level: "Fortgeschritten",
     levelScore: 3,
     experienceYears: 1,
-    description: "Umsetzung von Web-Oberflächen für KI-Anwendungen wie QuerySage AI.",
+    description: "Umsetzung von Web-Oberflächen für eigene KI-Anwendungen.",
   },
   {
     id: "typescript",

@@ -13,9 +13,9 @@ export const askMarcoEntries: AskMarcoEntry[] = [
     id: "ki-erfahrung",
     question: "Welche KI-Kompetenzen bringt Marco mit?",
     answer:
-      "Marco beschäftigt sich mit Prompt-Engineering, KI-Agenten, generativer KI und lokalen LLMs (z.B. via Ollama). Ein Beispiel ist QuerySage AI, ein selbst entwickelter KI-gestützter SQL Review Assistent.",
+      "Marco beschäftigt sich mit Prompt-Engineering, KI-Agenten, generativer KI und lokalen LLMs (z.B. via Ollama). Ein Beispiel ist Sm@rtCraft, eine selbst konzipierte und entwickelte KI-Webanwendung, die Baustellen- und Heimwerkerprobleme per Foto oder Beschreibung analysiert.",
     category: "KI",
-    keywords: ["ki", "ai", "llm", "prompting", "ollama", "querysage"],
+    keywords: ["ki", "ai", "llm", "prompting", "ollama", "smartcraft"],
   },
   {
     id: "programmiersprachen",
