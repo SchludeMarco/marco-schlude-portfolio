@@ -2,6 +2,22 @@ import type { Certificate } from "@/types";
 
 export const certificates: Certificate[] = [
   {
+    id: "cloud-business-expert-ihk",
+    title: "Cloud Business Expert (IHK)",
+    issuer: "IHK",
+    category: "Cloud",
+    date: "Prüfung bestanden im September 2026",
+    competencies: [
+      "Cloud-Architektur & Anbieterbewertung",
+      "Migrationsstrategie (Replatforming)",
+      "IT-Security & Compliance",
+      "Kostenoptimierung & Wirtschaftlichkeit",
+    ],
+    description:
+      "Kompetenzen in Cloud-Strategie, -Beratung und -Geschäftsmodellen, nachgewiesen im Abschlussprojekt zur Cloud-Migration einer SQL-Analyseplattform (Microsoft Azure). Prüfung im September 2026 bestanden – Zertifikat folgt in Kürze.",
+    relatedProjectSlug: "cloud-strategie-sql-analyseplattform",
+  },
+  {
     id: "ki-anwendungsspezialist-ihk",
     title: "KI Anwendungsspezialist (IHK)",
     issuer: "Syntax Institut, IHK-geprüft",
@@ -19,7 +35,7 @@ export const certificates: Certificate[] = [
       "Fortgeschrittenes Prompting für Text, Bild, Daten & Frontend-Entwicklung",
     ],
     description:
-      "Übergreifendes Kurszertifikat für die Qualifizierung „KI & digitale Prozessoptimierung\", bestehend aus drei Modulen: „KI Grundlagen: GenAI & LLMs\" (150 UE), „Professionell mit KI im Job arbeiten\" (200 UE) und „Prozessautomatisierung mit Prompting & Agenten\" (250 UE). Zertifizierte Qualifikation im praktischen Einsatz von KI-Anwendungen in Unternehmen.",
+      "Übergreifendes Kurszertifikat für die Qualifizierung „KI & digitale Prozessoptimierung\" (Module: KI Grundlagen, Professionell mit KI im Job arbeiten, Prozessautomatisierung mit Prompting & Agenten). Zertifizierte Qualifikation im praktischen Einsatz von KI-Anwendungen in Unternehmen.",
   },
   {
     id: "generative-ai-llms",
@@ -39,7 +55,7 @@ export const certificates: Certificate[] = [
       "KI Compliance",
     ],
     description:
-      "Modul „KI Grundlagen: GenAI & LLMs\" im Rahmen der Qualifizierung „KI & digitale Prozessoptimierung\". Praktischer Umgang mit generativen KI-Werkzeugen (u.a. Gemini Pro, ChatGPT, Claude, DeepSeek, Copilot, Adobe Firefly, Google Veo) in eigenständigen und Team-Projekten, mit Fokus auf rechtssicheren und verantwortungsvollen Einsatz.",
+      "Praktischer Umgang mit generativen KI-Werkzeugen (u.a. ChatGPT, Claude, Gemini) in eigenständigen und Team-Projekten, mit Fokus auf rechtssicheren und verantwortungsvollen Einsatz.",
   },
   {
     id: "prozessautomatisierung-prompting-agenten",
@@ -59,23 +75,7 @@ export const certificates: Certificate[] = [
       "Konzeption und Steuerung autonomer KI-Agenten-Systeme",
     ],
     description:
-      "Modul „Prozessautomatisierung mit Prompting & Agenten\" im Rahmen der Qualifizierung „KI & digitale Prozessoptimierung\". Entwicklung und Feinabstimmung komplexer LLM-Kontexte mittels RAG, Umsetzung von End-to-End-KI-Workflows zur Prozessautomatisierung sowie Konzeption und Steuerung autonomer Multi-Agenten-Systeme für anspruchsvolle Aufgaben.",
-  },
-  {
-    id: "cloud-business-expert-ihk",
-    title: "Cloud Business Expert (IHK)",
-    issuer: "IHK",
-    category: "Cloud",
-    date: "Prüfung bestanden im September 2026",
-    competencies: [
-      "Cloud-Architektur & Anbieterbewertung",
-      "Migrationsstrategie (Replatforming)",
-      "IT-Security & Compliance",
-      "Kostenoptimierung & Wirtschaftlichkeit",
-    ],
-    description:
-      "IHK-Prüfung zum Cloud Business Expert im September 2026 erfolgreich bestanden – das Zertifikat wird in Kürze nachgereicht. Kompetenzen in Cloud-Strategie, -Beratung und -Geschäftsmodellen, nachgewiesen im Abschlussprojekt zur Cloud-Migration einer SQL-Analyseplattform.",
-    relatedProjectSlug: "cloud-strategie-sql-analyseplattform",
+      "Entwicklung komplexer LLM-Kontexte mittels RAG, End-to-End-KI-Workflows zur Prozessautomatisierung sowie Konzeption und Steuerung autonomer Multi-Agenten-Systeme.",
   },
 ];
 

@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
       end: "2024-12",
     },
     summary:
-      "Entwicklung und Anpassung von APplus ERP Dashboards sowie SQL Server Optimierungen sowie Unterstützung der Fachbereiche Einkauf, Vertrieb, Produktion, Lager und Versand.",
+      "Entwicklung und Anpassung von APplus ERP Dashboards und SQL Server Optimierungen sowie Unterstützung der Fachbereiche Einkauf, Vertrieb, Produktion, Lager und Versand.",
     tasks: [
       "Entwicklung und Anpassung von APplus ERP Dashboards",
       "SQL Server Optimierungen",
