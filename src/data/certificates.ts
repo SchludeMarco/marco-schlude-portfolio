@@ -32,12 +32,22 @@ export const certificates: Certificate[] = [
   {
     id: "prozessautomatisierung-prompting-agenten",
     title: "Prozessautomatisierung mit Prompting & Agenten",
-    issuer: "Syntax Institut",
+    issuer: "Syntax Institut, IHK-geprüft",
     organization: "Syntax GmbH für Aus- und Weiterbildung, Berlin",
     accreditations: ["AZAV-zertifiziert", "CERTQUA", "IHK-geprüft"],
     category: "Prozessautomatisierung",
+    date: "20.02.2026",
+    duration: "250 UE · 17.01.2026 – 20.02.2026",
+    competencies: [
+      "Ethische und rechtliche Rahmenbedingungen der KI-Nutzung",
+      "Strategische Informationsgewinnung und -validierung",
+      "Professionelles Prompting für Text, Bild & Frontend-Entwicklung",
+      "Datenschutz & Compliance für agentische KI",
+      "Automatisierung und Optimierung von Geschäftsprozessen mit KI-Tools",
+      "Konzeption und Steuerung autonomer KI-Agenten-Systeme",
+    ],
     description:
-      "Modul im Rahmen der Qualifizierung „KI & digitale Prozessoptimierung\" bei Syntax Institut. Automatisierung von Geschäftsprozessen mittels Prompt-Engineering und KI-Agenten.",
+      "Modul „Prozessautomatisierung mit Prompting & Agenten\" im Rahmen der Qualifizierung „KI & digitale Prozessoptimierung\". Entwicklung und Feinabstimmung komplexer LLM-Kontexte mittels RAG, Umsetzung von End-to-End-KI-Workflows zur Prozessautomatisierung sowie Konzeption und Steuerung autonomer Multi-Agenten-Systeme für anspruchsvolle Aufgaben.",
   },
   {
     id: "devops-administration",
