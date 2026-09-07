@@ -4,10 +4,22 @@ export const certificates: Certificate[] = [
   {
     id: "ki-anwendungsspezialist-ihk",
     title: "KI Anwendungsspezialist (IHK)",
-    issuer: "IHK",
+    issuer: "Syntax Institut, IHK-geprüft",
+    organization: "Syntax GmbH für Aus- und Weiterbildung, Berlin",
+    accreditations: ["AZAV-zertifiziert", "CERTQUA", "IHK-geprüft"],
     category: "KI",
+    date: "20.02.2026",
+    duration: "600 UE · 17.11.2025 – 20.02.2026 (Remote Learning)",
+    competencies: [
+      "Professionelle Anwendung & Bewertung multimodaler KI-Systeme",
+      "Datenanalyse, Deep Research & strategische Informationsvalidierung",
+      "KI-Projektplanung, Nutzerforschung & Workflow-Automatisierung",
+      "Datenschutz, KI-Compliance & rechtliche Rahmenbedingungen (inkl. EU AI Act)",
+      "Entwicklung und Steuerung agentischer KI- und Agenten-Systeme",
+      "Fortgeschrittenes Prompting für Text, Bild, Daten & Frontend-Entwicklung",
+    ],
     description:
-      "Zertifizierte Qualifikation im praktischen Einsatz von KI-Anwendungen in Unternehmen.",
+      "Übergreifendes Kurszertifikat für die Qualifizierung „KI & digitale Prozessoptimierung\", bestehend aus drei Modulen: „KI Grundlagen: GenAI & LLMs\" (150 UE), „Professionell mit KI im Job arbeiten\" (200 UE) und „Prozessautomatisierung mit Prompting & Agenten\" (250 UE). Zertifizierte Qualifikation im praktischen Einsatz von KI-Anwendungen in Unternehmen.",
   },
   {
     id: "generative-ai-llms",
@@ -53,11 +65,9 @@ export const certificates: Certificate[] = [
     id: "devops-administration",
     title: "DevOps & Administration",
     issuer: "Syntax Institut",
-    organization: "Syntax GmbH für Aus- und Weiterbildung, Berlin",
-    accreditations: ["AZAV-zertifiziert", "CERTQUA", "IHK-geprüft"],
     category: "DevOps",
     description:
-      "Modul im Rahmen der Qualifizierung „KI & digitale Prozessoptimierung\" bei Syntax Institut. Grundlagen und Praxis von DevOps-Methoden, Systemadministration und Deployment.",
+      "Grundlagen und Praxis von DevOps-Methoden, Systemadministration und Deployment.",
   },
   {
     id: "cloud-business-expert-ihk",
