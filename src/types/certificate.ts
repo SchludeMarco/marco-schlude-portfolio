@@ -2,7 +2,8 @@ export type CertificateCategory =
   | "KI"
   | "Prozessautomatisierung"
   | "DevOps"
-  | "ERP";
+  | "ERP"
+  | "Cloud";
 
 export interface Certificate {
   id: string;

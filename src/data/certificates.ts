@@ -33,6 +33,15 @@ export const certificates: Certificate[] = [
     description:
       "Grundlagen und Praxis von DevOps-Methoden, Systemadministration und Deployment.",
   },
+  {
+    id: "cloud-business-expert-ihk",
+    title: "Cloud Business Expert (IHK)",
+    issuer: "IHK",
+    category: "Cloud",
+    date: "September 2026",
+    description:
+      "IHK-Prüfung zum Cloud Business Expert erfolgreich abgeschlossen – Kompetenzen in Cloud-Strategie, -Beratung und -Geschäftsmodellen.",
+  },
 ];
 
 export function getCertificateById(id: string): Certificate | undefined {

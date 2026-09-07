@@ -45,9 +45,9 @@ export const askMarcoEntries: AskMarcoEntry[] = [
     id: "zertifikate",
     question: "Welche Zertifikate hat Marco?",
     answer:
-      "Unter anderem den IHK-Abschluss 'KI Anwendungsspezialist' sowie Qualifikationen in Generative AI & LLMs, Prozessautomatisierung mit Prompting & Agenten und DevOps & Administration.",
+      "Unter anderem die IHK-Abschlüsse 'KI Anwendungsspezialist' und 'Cloud Business Expert' sowie Qualifikationen in Generative AI & LLMs, Prozessautomatisierung mit Prompting & Agenten und DevOps & Administration.",
     category: "Zertifikate",
-    keywords: ["zertifikat", "ihk", "qualifikation", "abschluss"],
+    keywords: ["zertifikat", "ihk", "qualifikation", "abschluss", "cloud"],
   },
 ];
 
