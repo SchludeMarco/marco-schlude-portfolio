@@ -165,8 +165,8 @@ export const skills: Skill[] = [
     id: "prompting-agenten",
     name: "Prompting & KI-Agenten",
     category: "KI",
-    level: "Erfahren",
-    levelScore: 4,
+    level: "Fortgeschritten",
+    levelScore: 3,
     experienceYears: 1,
     description: "Prozessautomatisierung mittels Prompt-Engineering und KI-Agenten.",
   },
@@ -174,8 +174,8 @@ export const skills: Skill[] = [
     id: "ollama-llms",
     name: "Ollama & lokale LLMs",
     category: "KI",
-    level: "Erfahren",
-    levelScore: 4,
+    level: "Fortgeschritten",
+    levelScore: 3,
     experienceYears: 1,
     description: "Betrieb und Integration lokaler Sprachmodelle wie Llama 3.1.",
   },
@@ -254,8 +254,7 @@ export const skills: Skill[] = [
     level: "Fortgeschritten",
     levelScore: 3,
     experienceYears: 1,
-    description:
-      "Cloud Practitioner Zertifizierung; Infrastructure-as-Code mit AWS CDK für WebSurface.",
+    description: "Infrastructure-as-Code mit AWS CDK für WebSurface.",
   },
 ];
 
