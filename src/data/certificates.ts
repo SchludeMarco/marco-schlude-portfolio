@@ -18,6 +18,22 @@ export const certificates: Certificate[] = [
     relatedProjectSlug: "cloud-strategie-sql-analyseplattform",
   },
   {
+    id: "ai-application-expert-ihk",
+    title: "AI Application Expert (IHK)",
+    issuer: "IHK Akademie München und Oberbayern gGmbH",
+    category: "KI",
+    date: "09.03.2026",
+    competencies: [
+      "Grundlagen der KI & Funktionsweise generativer KI",
+      "Prompting-Strategien für Text- und Bild-KI",
+      "KI-Tools in der Praxis (ChatGPT, Gemini, Notion AI u.a.)",
+      "Automatisierung mit Agenten-Logik und Workflows",
+      "Eigenes KI-Projekt planen, umsetzen und präsentieren",
+    ],
+    description:
+      "Lehrgang der IHK Akademie München und Oberbayern zu generativer KI, Prompting-Strategien und Automatisierung mit KI-Agenten, abgeschlossen mit einem eigenen KI-Projekt.",
+  },
+  {
     id: "ki-anwendungsspezialist-ihk",
     title: "KI Anwendungsspezialist (IHK)",
     issuer: "Syntax Institut, IHK-geprüft",
